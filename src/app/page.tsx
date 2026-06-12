@@ -10,28 +10,46 @@ import initialBookmarks from '../data/bookmarks.json';
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [bookmarks, setBookmarks] = useState<any[]>(initialBookmarks);
+
+  // Sync with API on mount to load fresh curated edits
+  useEffect(() => {
+    async function syncBookmarks() {
+      try {
+        const res = await fetch('/api/bookmarks');
+        if (res.ok) {
+          const data = await res.json();
+          setBookmarks(data);
+        }
+      } catch (err) {
+        console.error('Failed dynamic bookmarks sync:', err);
+      }
+    }
+    syncBookmarks();
+  }, []);
   
   // Sort bookmarks by timestamp descending
   const sortedBookmarks = useMemo(() => {
-    return [...initialBookmarks].sort(
+    return [...bookmarks].sort(
       (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
     );
-  }, []);
+  }, [bookmarks]);
 
   // Compute available weeks dynamically and sort descending
   const availableWeeks = useMemo(() => {
     const weeksSet = new Set<string>();
     sortedBookmarks.forEach((b) => {
-      if (b.week) weeksSet.add(b.week);
+      // Only include weeks of bookmarks that are visible
+      if (b.week && b.visible !== false) weeksSet.add(b.week);
     });
     return Array.from(weeksSet).sort((a, b) => b.localeCompare(a));
   }, [sortedBookmarks]);
 
   const [selectedWeek, setSelectedWeek] = useState<string>('');
 
-  // Set default week once availableWeeks is loaded or updated
+  // Set default week once availableWeeks is loaded
   useEffect(() => {
-    if (availableWeeks.length > 0 && (!selectedWeek || !availableWeeks.includes(selectedWeek))) {
+    if (availableWeeks.length > 0 && !selectedWeek) {
       setSelectedWeek(availableWeeks[0]);
     }
   }, [availableWeeks, selectedWeek]);
@@ -40,15 +58,18 @@ export default function Home() {
   const categories = useMemo(() => {
     const catsSet = new Set<string>();
     sortedBookmarks.forEach((b) => {
-      if (b.category) catsSet.add(b.category);
+      if (b.category && b.visible !== false) catsSet.add(b.category);
     });
     return ['all', ...Array.from(catsSet)];
   }, [sortedBookmarks]);
 
-  // Filter bookmarks by both week and category
+  // Filter bookmarks by visibility, week, and category
   const filteredBookmarks = useMemo(() => {
     return sortedBookmarks.filter((b) => {
-      const matchesWeek = b.week === selectedWeek;
+      // Exclude hidden bookmarks
+      if (b.visible === false) return false;
+
+      const matchesWeek = selectedWeek === 'all' || b.week === selectedWeek;
       const matchesCategory =
         selectedCategory.toLowerCase() === 'all' ||
         b.category.toLowerCase() === selectedCategory.toLowerCase();

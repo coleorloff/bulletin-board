@@ -36,6 +36,7 @@ export default function Header({ activeWeek, availableWeeks, onWeekChange, itemC
         <div className="brand-logo">
           <span className="logo-symbol">❖</span>
           <h1 className="brand-title">Weekly Log</h1>
+          <a href="/curate" className="curate-nav-link" title="Curate Bookmarks">Curate</a>
         </div>
         <p className="brand-subtitle">
           Inspiration, resources, and cultural tip-offs outside official work.
@@ -52,6 +53,7 @@ export default function Header({ activeWeek, availableWeeks, onWeekChange, itemC
               onChange={(e) => onWeekChange(e.target.value)}
               className="week-select-dropdown"
             >
+              <option value="all">All Volumes</option>
               {availableWeeks.map((week) => (
                 <option key={week} value={week}>
                   {formatWeekName(week)}
