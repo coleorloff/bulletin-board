@@ -1,0 +1,119 @@
+[
+  {
+    "id": "b71j8x5cv",
+    "url": "https://figma.com/",
+    "title": "Figma: The Collaborative Interface Design Tool",
+    "description": "Figma is the leading collaborative design platform for building meaningful products. Design, prototype, and build products faster—while gathering feedback all in one place.",
+    "category": "design",
+    "timestamp": "2026-06-12T14:35:03.928Z",
+    "week": "2026-W24",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/342e17642c7afa81206490b0dd21c3e5724ae040-2400x1260.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format",
+    "fallbackStyle": null,
+    "tags": [
+      "design"
+    ],
+    "comment": "Check out this design tool:"
+  },
+  {
+    "id": "1",
+    "url": "https://coleorloff.com/",
+    "title": "Cole Orloff Portfolio",
+    "description": "Minimal design and development portfolio illustrating elegant interactions.",
+    "category": "design",
+    "timestamp": "2026-06-12T14:30:00Z",
+    "week": "2026-W24",
+    "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
+    "fallbackStyle": null,
+    "tags": [
+      "portfolio",
+      "minimalism",
+      "inspiration"
+    ],
+    "comment": "Incredible page loading transitions and typography constraints."
+  },
+  {
+    "id": "2",
+    "url": "chrome-tip://search-tab",
+    "title": "Chrome Tip: Search Tabs Quickly",
+    "description": "Type '@tabs' in the Chrome address bar to search through open tabs instantly.",
+    "category": "tip-off",
+    "timestamp": "2026-06-11T10:00:00Z",
+    "week": "2026-W24",
+    "image": null,
+    "fallbackStyle": "chrome-ui",
+    "tags": [
+      "chrome",
+      "productivity",
+      "tip"
+    ],
+    "comment": "Absolute game-changer for tab hoarders."
+  },
+  {
+    "id": "3",
+    "url": "https://m3.material.io/",
+    "title": "Material 3 Design System",
+    "description": "Google's open-source design system, providing components, guidelines, and tools.",
+    "category": "design",
+    "timestamp": "2026-06-10T12:00:00Z",
+    "week": "2026-W24",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop",
+    "fallbackStyle": null,
+    "tags": [
+      "material3",
+      "design-system",
+      "google"
+    ],
+    "comment": "Super clean component elevation rules and color mappings."
+  },
+  {
+    "id": "4",
+    "url": "https://github.com/features/copilot",
+    "title": "GitHub Copilot Workspace",
+    "description": "A natural language developer environment that helps you build features, write tests, and fix bugs.",
+    "category": "development",
+    "timestamp": "2026-06-08T09:00:00Z",
+    "week": "2026-W24",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+    "fallbackStyle": null,
+    "tags": [
+      "copilot",
+      "ai",
+      "github"
+    ],
+    "comment": "The agentic software development workflow is arriving rapidly."
+  },
+  {
+    "id": "5",
+    "url": "https://spotify.design/",
+    "title": "Spotify Design Journal",
+    "description": "A repository of stories, research, and reflections from the design community at Spotify.",
+    "category": "culture",
+    "timestamp": "2026-06-05T15:30:00Z",
+    "week": "2026-W23",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop",
+    "fallbackStyle": null,
+    "tags": [
+      "spotify",
+      "music",
+      "culture"
+    ],
+    "comment": "Interesting thoughts on designing for personalization and listener moods."
+  },
+  {
+    "id": "6",
+    "url": "chrome-tip://tab-groups",
+    "title": "Chrome Tip: Auto Tab Groups",
+    "description": "Right click a tab and select 'Add tab to new group'. Organize your research topics.",
+    "category": "tip-off",
+    "timestamp": "2026-06-04T11:00:00Z",
+    "week": "2026-W23",
+    "image": null,
+    "fallbackStyle": "chrome-ui",
+    "tags": [
+      "chrome",
+      "organization",
+      "tabs"
+    ],
+    "comment": "Helps declutter workspace. You can color-code your groups."
+  }
+]
