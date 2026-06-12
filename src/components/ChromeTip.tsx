@@ -29,19 +29,19 @@ export default function ChromeTip({ title, description, comment, tags }: ChromeT
           <span className="omnibox-text-typed">@tabs</span>
           <span className="omnibox-cursor">|</span>
         </div>
-        <span className="omnibox-shortcut">⌘ + T</span>
+        <span className="omnibox-shortcut">⌘ + ⇧ + A</span>
       </div>
       <div className="chrome-content">
         <div className="tip-header-row">
           <span className="tag-label accent-lime">CHROME TRICK</span>
         </div>
         <h3 className="tip-title">{title}</h3>
-        <p className="tip-description">{description}</p>
         {comment && (
           <div className="tip-comment">
-            <p className="comment-text">{comment}</p>
+            <p className="comment-text">“{comment}”</p>
           </div>
         )}
+        <p className="tip-description">{description}</p>
         {tags && tags.length > 0 && (
           <div className="card-tags">
             {tags.map((tag) => (

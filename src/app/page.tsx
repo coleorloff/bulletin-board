@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Header from '../components/Header';
 import Filter from '../components/Filter';
 import Board from '../components/Board';
@@ -27,10 +27,14 @@ export default function Home() {
     return Array.from(weeksSet).sort((a, b) => b.localeCompare(a));
   }, [sortedBookmarks]);
 
-  // Set the default week to the latest week available
-  const [selectedWeek, setSelectedWeek] = useState<string>(() => {
-    return availableWeeks[0] || '';
-  });
+  const [selectedWeek, setSelectedWeek] = useState<string>('');
+
+  // Set default week once availableWeeks is loaded or updated
+  useEffect(() => {
+    if (availableWeeks.length > 0 && (!selectedWeek || !availableWeeks.includes(selectedWeek))) {
+      setSelectedWeek(availableWeeks[0]);
+    }
+  }, [availableWeeks, selectedWeek]);
 
   // Extract unique categories for the filter (plus 'all')
   const categories = useMemo(() => {

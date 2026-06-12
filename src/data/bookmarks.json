@@ -1,24 +1,9 @@
 [
   {
-    "id": "b71j8x5cv",
-    "url": "https://figma.com/",
-    "title": "Figma: The Collaborative Interface Design Tool",
-    "description": "Figma is the leading collaborative design platform for building meaningful products. Design, prototype, and build products faster—while gathering feedback all in one place.",
-    "category": "design",
-    "timestamp": "2026-06-12T14:35:03.928Z",
-    "week": "2026-W24",
-    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/342e17642c7afa81206490b0dd21c3e5724ae040-2400x1260.png?w=1200&amp;q=70&amp;fit=max&amp;auto=format",
-    "fallbackStyle": null,
-    "tags": [
-      "design"
-    ],
-    "comment": "Check out this design tool:"
-  },
-  {
     "id": "1",
     "url": "https://coleorloff.com/",
     "title": "Cole Orloff Portfolio",
-    "description": "Minimal design and development portfolio illustrating elegant interactions.",
+    "description": "Minimal design and development portfolio illustrating elegant interactions, strict grids, and premium type choices.",
     "category": "design",
     "timestamp": "2026-06-12T14:30:00Z",
     "week": "2026-W24",
@@ -29,13 +14,13 @@
       "minimalism",
       "inspiration"
     ],
-    "comment": "Incredible page loading transitions and typography constraints."
+    "comment": "Incredible page loading transitions and typography constraints. A masterclass in minimal light theme layout."
   },
   {
     "id": "2",
     "url": "chrome-tip://search-tab",
     "title": "Chrome Tip: Search Tabs Quickly",
-    "description": "Type '@tabs' in the Chrome address bar to search through open tabs instantly.",
+    "description": "Type '@tabs' in the Chrome address bar to search through open tabs instantly without leaving your keyboard.",
     "category": "tip-off",
     "timestamp": "2026-06-11T10:00:00Z",
     "week": "2026-W24",
@@ -46,13 +31,13 @@
       "productivity",
       "tip"
     ],
-    "comment": "Absolute game-changer for tab hoarders."
+    "comment": "Absolute game-changer for tab hoarders. Instantly indexes all open windows."
   },
   {
     "id": "3",
     "url": "https://m3.material.io/",
     "title": "Material 3 Design System",
-    "description": "Google's open-source design system, providing components, guidelines, and tools.",
+    "description": "Google's open-source design system, providing components, guidelines, and tools to help teams build premium products.",
     "category": "design",
     "timestamp": "2026-06-10T12:00:00Z",
     "week": "2026-W24",
@@ -63,13 +48,13 @@
       "design-system",
       "google"
     ],
-    "comment": "Super clean component elevation rules and color mappings."
+    "comment": "Super clean component elevation rules, dynamic HSL color matching, and typography grids."
   },
   {
     "id": "4",
     "url": "https://github.com/features/copilot",
     "title": "GitHub Copilot Workspace",
-    "description": "A natural language developer environment that helps you build features, write tests, and fix bugs.",
+    "description": "A natural language developer environment that helps you build features, write tests, and fix bugs in a structured workspace.",
     "category": "development",
     "timestamp": "2026-06-08T09:00:00Z",
     "week": "2026-W24",
@@ -80,13 +65,13 @@
       "ai",
       "github"
     ],
-    "comment": "The agentic software development workflow is arriving rapidly."
+    "comment": "The agentic software development workflow is arriving rapidly. Incredibly fast iteration loops."
   },
   {
     "id": "5",
     "url": "https://spotify.design/",
     "title": "Spotify Design Journal",
-    "description": "A repository of stories, research, and reflections from the design community at Spotify.",
+    "description": "A repository of stories, research, and reflections from the design community at Spotify sharing product design guidelines.",
     "category": "culture",
     "timestamp": "2026-06-05T15:30:00Z",
     "week": "2026-W23",
@@ -97,13 +82,13 @@
       "music",
       "culture"
     ],
-    "comment": "Interesting thoughts on designing for personalization and listener moods."
+    "comment": "Interesting thoughts on designing for personalization, user playlists, and listener moods."
   },
   {
     "id": "6",
     "url": "chrome-tip://tab-groups",
     "title": "Chrome Tip: Auto Tab Groups",
-    "description": "Right click a tab and select 'Add tab to new group'. Organize your research topics.",
+    "description": "Right click a tab and select 'Add tab to new group'. Organize your active research topics in separate visual clusters.",
     "category": "tip-off",
     "timestamp": "2026-06-04T11:00:00Z",
     "week": "2026-W23",
@@ -114,6 +99,77 @@
       "organization",
       "tabs"
     ],
-    "comment": "Helps declutter workspace. You can color-code your groups."
+    "comment": "Helps declutter workspaces. Pro tip: you can name and color-code groups to hide/expand folders."
+  },
+  {
+    "id": "7",
+    "url": "https://deepmind.google/models/synthid/",
+    "title": "SynthID: AI Content Watermarking",
+    "description": "Google DeepMind's tool for watermarking and identifying AI-generated content by embedding digital watermarks directly into AI outputs.",
+    "category": "development",
+    "timestamp": "2026-05-28T10:15:00Z",
+    "week": "2026-W22",
+    "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
+    "fallbackStyle": null,
+    "tags": [
+      "ai",
+      "watermark",
+      "synthid",
+      "google"
+    ],
+    "comment": "Really interesting technology. Embedding imperceptible watermarks into model weights to ensure content safety."
+  },
+  {
+    "id": "8",
+    "url": "https://histogram.in.ua/en/",
+    "title": "Histogram Digital Studio",
+    "description": "A premium visual studio creating highly interactive digital design experiences, spatial layout, and brand systems.",
+    "category": "design",
+    "timestamp": "2026-05-26T14:40:00Z",
+    "week": "2026-W22",
+    "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop",
+    "fallbackStyle": null,
+    "tags": [
+      "studio",
+      "inspiration",
+      "typography",
+      "grid"
+    ],
+    "comment": "Stunning grid-based typography constraints and interactive cursor physics. A beautiful reference for web layouts."
+  },
+  {
+    "id": "9",
+    "url": "https://nfp73.ch/en/topics",
+    "title": "NFP 73: Circular Economy Visualizer",
+    "description": "An interactive data platform exploring economic flows, resource consumption, and sustainable finance visual guidelines.",
+    "category": "design",
+    "timestamp": "2026-05-20T16:00:00Z",
+    "week": "2026-W21",
+    "image": "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=800&auto=format&fit=crop",
+    "fallbackStyle": null,
+    "tags": [
+      "dataviz",
+      "layout",
+      "interaction",
+      "economics"
+    ],
+    "comment": "A premium reference for data visualization layout. Clean, interactive maps and responsive SVG node structures."
+  },
+  {
+    "id": "10",
+    "url": "chrome-tip://site-search",
+    "title": "Chrome Tip: Create Custom Site Search Shortcuts",
+    "description": "Set up keywords in Settings > Search engines to query your favorite sites (like '@figma filename') directly from the omnibox.",
+    "category": "tip-off",
+    "timestamp": "2026-05-18T11:00:00Z",
+    "week": "2026-W21",
+    "image": null,
+    "fallbackStyle": "chrome-ui",
+    "tags": [
+      "chrome",
+      "productivity",
+      "search"
+    ],
+    "comment": "Huge time saver. Search Figma files, Github repositories, or internal docs in seconds without opening the homepage."
   }
 ]

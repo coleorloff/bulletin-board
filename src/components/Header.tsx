@@ -8,10 +8,26 @@ interface HeaderProps {
 }
 
 export default function Header({ activeWeek, availableWeeks, onWeekChange, itemCount }: HeaderProps) {
-  // Format week name (e.g. 2026-W24 to "Volume 24 // Week of Jun 8, 2026")
+  // Format week name (e.g. 2026-W24 to "Vol. 24 // Week of Jun 8, 2026")
   const formatWeekName = (weekStr: string) => {
-    const [year, weekNum] = weekStr.split('-W');
-    return `Vol. ${weekNum} (Year ${year})`;
+    try {
+      const [yearStr, weekNumStr] = weekStr.split('-W');
+      const year = parseInt(yearStr, 10);
+      const weekNum = parseInt(weekNumStr, 10);
+      
+      // Calculate Monday of the ISO week
+      const jan4 = new Date(year, 0, 4);
+      const dayOfWeek = jan4.getDay(); // 0 is Sunday, 1 is Monday...
+      const startOfFirstWeek = new Date(jan4.getTime() - ((dayOfWeek || 7) - 1) * 24 * 60 * 60 * 1000);
+      const targetMonday = new Date(startOfFirstWeek.getTime() + (weekNum - 1) * 7 * 24 * 60 * 60 * 1000);
+      
+      const options: Intl.DateTimeFormatOptions = { month: 'short', day: 'numeric' };
+      const dateFormatted = targetMonday.toLocaleDateString('en-US', options);
+      
+      return `Vol. ${weekNum} // Week of ${dateFormatted}`;
+    } catch (e) {
+      return weekStr;
+    }
   };
 
   return (

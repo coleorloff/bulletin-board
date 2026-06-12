@@ -228,33 +228,19 @@
   flex-direction: column;
   transition: var(--transition-spring);
   position: relative;
-}
-
-.link-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  border: 2px solid transparent;
-  pointer-events: none;
-  transition: var(--transition-smooth);
-  opacity: 0;
+  box-shadow: 0 4px 16px rgba(24, 25, 28, 0.04);
 }
 
 .link-card:hover {
   transform: translateY(-4px) scale(1.01);
-  border-color: transparent;
+  box-shadow: 0 12px 24px rgba(24, 25, 28, 0.07);
 }
 
-.link-card:hover::after {
-  opacity: 1;
-}
-
-/* Hover Accent glowing borders */
-.link-card.accent-blue:hover::after { border-color: var(--accent-blue); }
-.link-card.accent-coral:hover::after { border-color: var(--accent-coral); }
-.link-card.accent-lime:hover::after { border-color: var(--accent-lime); }
-.link-card.accent-purple:hover::after { border-color: var(--accent-purple); }
+/* Hover Accent borders */
+.link-card.accent-blue:hover { border-color: var(--accent-blue); }
+.link-card.accent-coral:hover { border-color: var(--accent-coral); }
+.link-card.accent-lime:hover { border-color: var(--accent-lime); }
+.link-card.accent-purple:hover { border-color: var(--accent-purple); }
 
 .card-media-wrapper {
   position: relative;
@@ -281,7 +267,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--bg-surface) 0%, #1A1D22 100%);
+  background: linear-gradient(135deg, var(--bg-surface) 0%, #E6E4DB 100%);
 }
 
 .fallback-symbol {
@@ -363,11 +349,16 @@
 
 .card-comment {
   background-color: var(--bg-primary);
-  border-left: 2px solid var(--text-tertiary);
+  border-left: 3px solid var(--text-tertiary);
   padding: 12px 16px;
   border-radius: 0 8px 8px 0;
   margin-bottom: 20px;
 }
+
+.link-card.accent-blue .card-comment { border-left-color: var(--accent-blue); }
+.link-card.accent-coral .card-comment { border-left-color: var(--accent-coral); }
+.link-card.accent-lime .card-comment { border-left-color: var(--accent-lime); }
+.link-card.accent-purple .card-comment { border-left-color: var(--accent-purple); }
 
 .comment-text {
   font-size: 12.5px;
@@ -454,44 +445,30 @@
    CHROME TIP COMPONENT STYLES
    ========================================== */
 .chrome-tip-card {
-  background-color: #101214;
-  border: 1px solid #1F2226;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: var(--transition-spring);
   position: relative;
-}
-
-.chrome-tip-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  border: 2px solid transparent;
-  pointer-events: none;
-  transition: var(--transition-smooth);
-  opacity: 0;
+  box-shadow: 0 4px 16px rgba(24, 25, 28, 0.04);
 }
 
 .chrome-tip-card:hover {
   transform: translateY(-4px) scale(1.01);
-  border-color: transparent;
-}
-
-.chrome-tip-card:hover::after {
+  box-shadow: 0 12px 24px rgba(24, 25, 28, 0.07);
   border-color: var(--accent-lime);
-  opacity: 1;
 }
 
 .chrome-window-header {
-  background-color: #0B0C0E;
+  background-color: #ECEBE5;
   height: 40px;
   display: flex;
   align-items: center;
   padding: 0 16px;
-  border-bottom: 1px solid #181B1F;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .chrome-dots {
@@ -518,11 +495,11 @@
 }
 
 .chrome-omnibox {
-  background-color: #15171A;
+  background-color: #FAF9F5;
   margin: 12px 16px;
   padding: 8px 12px;
   border-radius: 8px;
-  border: 1px solid #23272C;
+  border: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -544,18 +521,18 @@
 }
 
 .omnibox-text-typed {
-  color: var(--accent-lime);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
 .omnibox-cursor {
-  color: var(--accent-lime);
+  color: var(--text-primary);
   font-weight: 300;
   animation: cursorBlink 0.9s infinite step-end;
 }
 
 .omnibox-shortcut {
-  background-color: #23272C;
+  background-color: #E4E2D8;
   color: var(--text-secondary);
   font-size: 9.5px;
   padding: 2px 6px;
@@ -585,6 +562,7 @@
 
 .tag-label.accent-lime {
   background-color: var(--accent-lime);
+  color: var(--text-primary);
 }
 
 .tip-title {
@@ -603,8 +581,8 @@
 }
 
 .tip-comment {
-  background-color: #0A0B0C;
-  border-left: 2px solid var(--accent-lime);
+  background-color: var(--bg-primary);
+  border-left: 3px solid var(--accent-lime);
   padding: 12px 16px;
   border-radius: 0 8px 8px 0;
   margin-bottom: 20px;

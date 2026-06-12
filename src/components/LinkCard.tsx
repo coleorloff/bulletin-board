@@ -76,13 +76,14 @@ export default function LinkCard({
             <span className="arrow-icon">↗</span>
           </h3>
         </a>
-        <p className="card-description">{description}</p>
 
         {comment && (
           <div className="card-comment">
-            <p className="comment-text">{comment}</p>
+            <p className="comment-text">“{comment}”</p>
           </div>
         )}
+
+        <p className="card-description">{description}</p>
 
         {tags && tags.length > 0 && (
           <div className="card-tags">
@@ -96,15 +97,19 @@ export default function LinkCard({
 
         <div className="card-footer">
           <div className="action-buttons">
-            <button
-              onClick={() => setIsBookmarked(!isBookmarked)}
-              className={`action-btn bookmark-btn ${isBookmarked ? 'active' : ''}`}
-              aria-label="Bookmark this link"
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="action-btn link-btn"
+              aria-label="Open link directly"
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill={isBookmarked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
-            </button>
+            </a>
             
             <button
               onClick={handleCopyLink}
