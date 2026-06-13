@@ -43,3 +43,9 @@ next-env.d.ts
 # local setup guide
 setup_instructions.md
 
+# local bookmarks data
+/src/data/bookmarks.json
+/src/data/bookmarks_6_12_26.html
+/src/data/bookmarks_active_raw.json
+
+
